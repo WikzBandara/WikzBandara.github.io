@@ -10,546 +10,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
-<style>
-* {
-    padding: 0;
-    margin: 0;
-    font-family: 'Josefin Sans', sans-serif;
-    box-sizing: border-box;
-}
-
-.hero {
-    height: 100vh;
-    width: 100%;
-    background-image: url();
-    background-color: #000;
-    background-size: cover;
-    background-position: center;
-}
-
-
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 45px;
-    padding-left: 8%;
-    padding-right: 8%;
-}
-
-.logo {
-    color: rgb(255, 255, 255);
-    font-size: 35px;
-    letter-spacing: 1px;
-    cursor: pointer;
-}
-
-span {
-    color: #9a47e7;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    align-items: center;
-}
-
-nav ul li {
-    margin-right: 25px;
-}
-
-nav ul li:last-child {
-    margin-right: 0;
-}
-
-nav ul li a {
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    font-weight: bold;
-    text-transform: capitalize;
-}
-
-nav ul li a:hover {
-    color: #9a47e7;
-    transition: .4s;
-}
-
-.btn {
-    background-color: #9a47e7;
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    border: 2px solid transparent;
-    font-weight: bold;
-    padding: 10px 25px;
-    border-radius: 30px;
-    transition: transform .4s;
-}
-
-.btn:hover {
-        background-color: transparent;
-        border: 2px solid #9a47e7;
-        color: #9a47e7; /* Change this to your desired hover color */
-        cursor: pointer;
-}
-
-.content {
-    position: absolute;
-    top: 50%;
-    left: 8%;
-    transform: translateY(-50%);
-}
-
-h1 {
-    color: rgb(255, 255, 255);
-    margin: 20px 0px 20px;
-    font-size: 75px;
-}
-
-h3 {
-    color: white;
-    font-size: 25px;
-    margin-bottom: 50px;
-}
-  
-.static-text {
-    display: inline;
-    
-}
-  
-.word {
-    display: inline;
-    color: #ffffff;
-}
-
-h4 {
-    color: #9a47e7;
-    letter-spacing: 2px;
-    font-size: 20px;
-}
-
-.newslatter form {
-    width: 380px;
-    max-width: 100%;
-    position: relative;
-}
-
-.newslatter form input:first-child {
-    display: inline-block;
-    width: 100%;
-    padding: 14px 130px 14px 15px;
-    border: 2px solid #9a47e7;
-    outline: none;
-    border-radius: 30px;
-}
-
-.newslatter form input:last-child {
-    position: absolute;
-    display: inline-block;
-    outline: none;
-    border: none;
-    padding: 10px 30px;
-    border-radius: 30px;
-    background-color: #9a47e7;
-    color: white;
-    box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
-    top: 6px;
-    right: 6px;
-}
-
-/* Mobile-responsive styles */
-@media (max-width: 768px) {
-    .logo {
-        font-size: 30px;
-    }
-
-    /* Show the menu button on mobile */
-    .mobile-menu-button {
-        display: block;
-        background: none;
-        border: none;
-        cursor: pointer;
-        font-size: 24px;
-        color: white;
-        position: absolute;
-        top: 15px;
-        right: 15px;
-        z-index: 2;
-    }
-
-    /* Hide the navigation links on mobile */
-    nav ul {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background-color: #000;
-        padding: 10px;
-        border-radius: 5px;
-        box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
-        z-index: 1;
-    }
-
-    nav ul.show-mobile-menu {
-        display: flex;
-    }
-
-    nav ul li {
-        margin-bottom: 10px;
-    }
-
-    /* Discord button styles */
-    .discord-button {
-        background-color: #9a47e7;
-        color: white;
-        text-decoration: none;
-        border: 2px solid transparent;
-        font-weight: bold;
-        padding: 10px 25px;
-        border-radius: 30px;
-        transition: transform .4s;
-        display: inline-block;
-    }
-
-    .discord-button:hover {
-        transform: scale(1.2);
-    }
-}
-
-/* Show the navigation links in desktop mode */
-@media (min-width: 769px) {
-    .mobile-menu-button {
-        display: none;
-    }
-
-    nav ul {
-        display: flex !important;
-    }
-}
-
-/*about*/
-.about {
-    padding: 50px 0;
-    background-color: #191919;
-}
-
-.about img {
-    max-width: 100%;
-    height: auto;
-}
-
-.about-text {
-    margin-top: 20px;
-    color: white;
-}
-
-.main {
-    max-width: 1130px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.about-text h2 {
-    font-size: 36px;
-    margin-bottom: 10px;
-}
-
-.about-text h5 {
-    font-size: 18px;
-    margin-bottom: 15px;
-}
-
-.about-text p {
-    font-size: 16px;
-    line-height: 24px;
-    margin-bottom: 30px;
-}
-
-button {
-    background-color: #9a47e7;
-    color: white;
-    text-decoration: none;
-    border: 2px solid transparent;
-    font-weight: bold;
-    padding: 13px 30px;
-    border-radius: 30px;
-    transition: background-color 0.4s, color 0.4s;
-}
-
-button:hover {
-    background-color: transparent;
-    border: 2px solid #9a47e752;
-    color: #9a47e7; /* Change this to your desired hover color */
-    cursor: pointer;
-}
-
-@media (min-width: 768px) {
-    .main {
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        text-align: left;
-    }
-
-    .about-text {
-        width: 50%;
-        text-align: left;
-    }
-
-    .about img {
-        width: 100%;
-        max-width: 430px;
-    }
-}
-
-/*projects*/
-.Projects {
-    background: #101010;
-    width: 100%;
-    padding: 50px 0;
-}
-
-.title h2 {
-    color: white;
-    font-size: 36px;
-    margin: 30px auto;
-    text-align: center;
-}
-
-.box {
-    display: flex;
-    flex-wrap: wrap; /* Allow cards to wrap to the next line on small screens */
-    justify-content: center;
-    align-items: center;
-    padding: 20px; /* Adjust spacing between cards */
-}
-
-.card {
-    height: auto; /* Remove fixed height */
-    width: 100%; /* Cards take full width on small screens */
-    max-width: 335px; /* Set a maximum width for cards */
-    padding: 20px 35px;
-    background: #191919;
-    border-radius: 20px;
-    margin: 15px;
-    position: relative;
-    overflow: hidden;
-    text-align: center;
-}
-
-.card i {
-    font-size: 50px;
-    display: block;
-    text-align: center;
-    margin: 25px 0px;
-    color: #9a47e7;
-}
-
-h5 {
-    color: white;
-    font-size: 23px;
-    margin-bottom: 15px;
-}
-
-.pra p {
-    color: rgb(93, 195, 230);
-    font-size: 16px;
-    line-height: 27px;
-    margin-bottom: 25px;
-}
-
-.card .button,
-.pra .button {
-    background-color: #9a47e7;
-    color: white;
-    text-decoration: none;
-    border: 2px solid transparent;
-    font-weight: bold;
-    padding: 9px 22px;
-    border-radius: 30px;
-    transition: 0.4s;
-}
-
-.card .button:hover,
-.pra .button:hover {
-    background-color: transparent;
-    border: 2px solid #9a47e7;
-    cursor: pointer;
-}
-
-/*skill*/
-
-.Skills {
-    padding: 100px 0;
-    background-color: #191919;
-}
-
-.Skills-text {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-/* Styles for smaller screens */
-@media screen and (max-width: 768px) {
-    .Skills-text {
-        max-width: 95%;
-    }
-}
-
-.Skills-text h2 {
-    color: white;
-    font-size: 48px;
-    text-transform: capitalize;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.Skills-text p {
-    color: rgb(255, 255, 255);
-    letter-spacing: 1px;
-    line-height: 24px;
-    font-size: 16px;
-    margin-bottom: 30px;
-    text-align: center;
-}
-
-.bottomGif {
-    position: fixed;
-    align-items: center;
-    transform: translateX(-50%);
-}
-
-/* Adjust image width for smaller screens */
-@media screen and (max-width: 768px) {
-    #gifImage {
-        width: 100%;
-        height: auto;
-    }
-}
-
-/*contact*/
-.contact-me {
-    width: 100%;
-    height: 290px;
-    background: #191919;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.contact-me h2 {
-    color: rgb(255, 255, 255);
-    font-size: 50px;
-    text-transform: capitalize;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.contact-me p {
-    color: #ffffff;
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.contact-me a button {
-    background-color: #9a47e7;
-    color: white;
-    text-decoration: none;
-    border: 2px solid transparent;
-    font-weight: bold;
-    padding: 13px 30px;
-    border-radius: 30px;
-    transition: .4s;
-}
-
-.contact-me a button:hover {
-    background-color: transparent;
-    border: 2px solid #9a47e7;
-    cursor: pointer;
-}
-
-/* Styles for smaller screens */
-@media screen and (max-width: 768px) {
-    .contact-me h2 {
-        font-size: 36px;
-    }
-
-    .contact-me p {
-        font-size: 16px;
-        font-weight: normal;
-    }
-
-    .contact-me a button {
-        padding: 10px 20px;
-        font-size: 16px;
-    }
-}
-
-
-
-/*-------*/
-footer{
-    position: relative;
-    width: 100%;
-    height: 400px;
-    background: #101010;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-footer p:nth-child(1){
-    font-size: 30px;
-    color: white;
-    margin-bottom: 20px;
-    font-weight: bold;
-}
-footer p:nth-child(2){
-    color: white;
-    font-size: 17px;
-    width: 500px;
-    text-align: center;
-    line-height: 26px;
-
-}
-.social{
-    display: flex;
-}
-.social a{
-    width: 45px;
-    height: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #9a47e7;
-    border-radius: 50%;
-    margin: 22px 10px;
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-
-
-}
-.social a:hover{
-    transform: scale(1.3);
-    transition: .3s;
-
-}
-.end{
-    position: absolute;
-    color: #9a47e7;
-    bottom: 35px;
-    font-size: 14px;
-}
-</style>
 <body>
     <!--heading-->
+    <div class="container">
+        <video class="background-video" src="https://streamable.com/e/oy14cd" autoplay loop muted></video>
 
     <div class="hero">
         <nav>
@@ -566,7 +30,7 @@ footer p:nth-child(2){
                 <li><a href="////////" class="btn discord-button">Discord</a></li>
             </ul>
         </nav>
-
+        <div style="width:100%;height:0px;position:relative;padding-bottom:56.250%;"><iframe src="https://streamable.com/e/oy14cd?autoplay=1&nocontrols=1" frameborder="0" width="100%" height="100%" allowfullscreen allow="autoplay" style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;"></iframe></div>
         <div class="content">
             <h4>Hello, I'm</h4>
             <h1>Wikz <span>B</span></h1>
@@ -589,7 +53,7 @@ footer p:nth-child(2){
         <div class="about-text">
             <h2>About <span>me</span></h2>
             <h5>Developer & Designer</h5>
-            <p>Hello, my name is Wikz bandara, and I am a second-year undergraduate software engineering student, I am a driven individual searching for a chance to leverage my technological skills in game development and Designing. I'm also a very diligent and devoted person who can work in a difficult environment to serve the greater good.</p>
+            <p>Yo,I'm Wikz B, and Iam a Game developer. I am a driven individual searching for a chance to leverage my technological skills in game development and Designing. I'm also a very diligent and devoted person who can work in a difficult environment to serve the greater good.</p>
             <button type="button" onclick="window.location.href='##'">Contact me</button>
         </div>
     </div>
@@ -597,56 +61,26 @@ footer p:nth-child(2){
 
 
     <!--Projects section-->
-    <section id="Projects"></section>
-<div class="Projects">
-    <div class="title">
-        <h2>Proje<span>cts</span></h2>
-    </div>
-    <div class="box">
-        <div class="card">
-            <i class="fa-brands fa-chrome"></i>
-            <h5>Game Development</h5>
-            <div class="pra">
-                <p><br></p>
-                <p style="text-align: center;">
-                    <a class="button" href=""> Read More</a>
-                </p>
-            </div>
-        </div>
 
-        <div class="card">
-            <i class="fa-brands fa-chrome"></i>
-            <h5>Designing</h5>
-            <div class="pra">
-                <p><br></p>
-                <p style="text-align: center;">
-                    <a class="button" href=""> Read More</a>
-                </p>
-            </div>
-        </div>
-
-        <div class="card">
-            <i class="fa-brands fa-chrome"></i>
-            <h5>3D models</h5>
-            <div class="pra">
-                <p><br></p>
-                <p style="text-align: center;">
-                    <a class="button" href=""> Read More</a>
-                </p>
-            </div>
-        </div>
-
-        <!-- Add the rest of your card elements here -->
-
-    </div>
-    <p>^^^^^^</p>
-
-    <div class="pra">
-        <p style="text-align: center;">
-            <a class="button" href=""> See More</a>
-        </p>
-    </div>
+    <section id="project"></section>
+    <div class="project-text">
+        <h2>my <span>projects</span></h2></div>
+  <div class="empty-space">
+    
+<div class="pcontainer">
+  <div class="box">
+      <span style="--i:1;"><img src="https://media.discordapp.net/attachments/1150774051862757376/1151614974435790878/Olova.png" alt=""></span>
+      <span style="--i:2;"><img src="https://media.discordapp.net/attachments/1150774051862757376/1151755721927569408/BluVie_B.png" alt=""></span>
+      <span style="--i:3;"><img src="https://media.discordapp.net/attachments/1150774051862757376/1152183195387826186/occie.png" alt=""></span>
+      <span style="--i:4;"><img src="https://media.discordapp.net/attachments/1150774051862757376/1152681123336425574/bluvieo.png" alt=""></span>
+      <span style="--i:5;"><img src="https://media.discordapp.net/attachments/1150774051862757376/1153359185635983360/luca.png" alt=""></span>
+      <span style="--i:6;"><img src="https://media.discordapp.net/attachments/1150774051862757376/1153598808643600446/trazer.png" alt=""></span>
+      <span style="--i:7;"><img src="https://media.discordapp.net/attachments/1150774051862757376/1153763986437853225/trazyro.png" alt=""></span>
+      <span style="--i:8;"><img src="https://media.discordapp.net/attachments/1150774051862757376/1158463197351788554/tlwMpMt.png" alt=""></span>
+  </div>
 </div>
+  </div>
+  </div>
 
     
     <!--Skills section-->
@@ -657,7 +91,7 @@ footer p:nth-child(2){
                 <div class="Skills-text">
                     <h2>Skil<span>ls</span></h2>
                     <p>With a solid academic background as an undergraduate, I've cultivated proficiency in diverse programming languages like Java and Python. My project engagements have further refined my capabilities, spanning HTML, CSS, JavaScript, Flask/FastAPIs, PHP, and SQL. Proficiently versed in version control with Git, I possess an adeptness at problem-solving and critical thinking. My enthusiasm for addressing intricate challenges drives me to innovate solutions, enhancing user experiences.</p>
-                    <img id="gifImage" src="" alt="GIF Image">
+                    <img id="gifImage" src="" alt="">
                 </div>
             </div>
         </section>
@@ -692,7 +126,7 @@ footer p:nth-child(2){
 
     <script>
 
-        var keywords = ["Game Developer", "Graphic Designer", "3D Model Creator"],
+        var keywords = ["Game Developer", "Game Designer", "3D Artist", "Animator"],
   part,
   i = 0,
   offset = 0,
@@ -752,10 +186,55 @@ window.onload = function () {
             const email = emailInput.value;
             
             if (email) {
-                const mailtoLink = "mailto:your.//////////?subject=New%20Contact%20Form%20Submission&body=Email:%20" + encodeURIComponent(email);
+                const mailtoLink = "mailto:your.bandarawikz@gmail.com?subject=New%20Contact%20Form%20Submission&body=Email:%20" + encodeURIComponent(email);
                 window.location.href = mailtoLink;
             }
         }
+
+        let prev = document.querySelector('.prev');
+    let next = document.querySelector('.next');
+    let box = document.querySelector('.box');
+
+    let degrees = 0;
+    let isAutoRotating = false;
+    let rotationInterval;
+
+    // Function to rotate the gallery automatically
+    function autoRotate() {
+        degrees += 45;
+        box.style.transform = `perspective(1000px) rotateY(${degrees}deg)`;
+    }
+
+    // Start auto-rotation when the page loads
+    startAutoRotation();
+
+    // Start auto-rotation function
+    function startAutoRotation() {
+        if (!isAutoRotating) {
+            isAutoRotating = true;
+            rotationInterval = setInterval(autoRotate, 2000); // Change image every 2 seconds
+        }
+    }
+
+    // Stop auto-rotation when a user interacts with the gallery
+    function stopAutoRotation() {
+        if (isAutoRotating) {
+            isAutoRotating = false;
+            clearInterval(rotationInterval);
+        }
+    }
+
+    prev.addEventListener('click', function () {
+        degrees += 45;
+        box.style.transform = `perspective(1000px) rotateY(${degrees}deg)`;
+        stopAutoRotation(); // Stop auto-rotation on user interaction
+    });
+
+    next.addEventListener('click', function () {
+        degrees -= 45;
+        box.style.transform = `perspective(1000px) rotateY(${degrees}deg)`;
+        stopAutoRotation(); // Stop auto-rotation on user interaction
+    });
     </script>
 </body>
 </html>
